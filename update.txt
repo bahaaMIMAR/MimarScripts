@@ -1,3 +1,0 @@
-[Update]
-Version=3.1
-URL=https://github.com/bahaaMIMAR/MimarScripts/releases/latest/
