@@ -1,4 +1,4 @@
-# MimarScripts
+# Mimar Scripts
 ![MIMAR](https://github.com/bahaaMIMAR/MimarScripts/blob/main/Mimar%20-%20banner.webp)
 
 
