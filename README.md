@@ -3,7 +3,7 @@
 
 
 ## Overview
-This project packages the open-source [Relay](https://github.com/johnpierson/Relay) plugin for Revit, various Dynamo packages required to be installed for some of our graphs to work, and a collection of our own Dynamo grpahs/scripts and custom nodes/definitions in a single installer, ensuring a seamless, plugin-like experience for our team when working with Revit.
+This project packages the open-source [Relay](https://github.com/johnpierson/Relay) plugin for Revit, various Dynamo packages required to be installed for some of our graphs to work, and a collection of our own Dynamo graphs/scripts and custom nodes/definitions in a single installer, ensuring a seamless, plugin-like experience for our team when working with Revit.
 
 
 ## Relevant Links
