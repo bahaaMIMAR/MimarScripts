@@ -6,7 +6,7 @@ Add-Type -AssemblyName System.Drawing
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
 # Create a function for the main script logic
-function Invoke-Script {
+function Run-Script {
     param (
         [string]$directoryPath
     )
