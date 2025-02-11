@@ -141,14 +141,14 @@ if ($WinTheme -eq "Dark") {
     $textBox.BorderStyle = 'FixedSingle'
     $textBox.BackColor = [System.Drawing.Color]::FromArgb(50, 50, 50)
     $textBox.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255)
+    $form.BackColor = $lightcolor
+    $form.ForeColor = $txtcolor
 } else {
     $lightcolor = [System.Drawing.Color]::SystemColor
     $txtcolor = [System.Drawing.Color]::SystemColor
     #$buttonBrowse.Height = 23
 }
 #
-$form.BackColor = $lightcolor
-$form.ForeColor = $txtcolor
 
 # Show the form
 $form.ShowDialog()
