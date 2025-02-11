@@ -28,6 +28,14 @@ Write-Host -ForegroundColor Blue "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@
 @@@  @@@@@@@@@@@@@@@@@@@@@@@@@@   @@        @@@@@@@@@@@@@@@@@@@@
 & @@@@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
+#Get the current theme
+$appsTheme = Get-ItemPropertyValue -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "AppsUseLightTheme" -ErrorAction SilentlyContinue
+if ($appsTheme -eq 0) {
+    $WinTheme = "Dark"
+} else {
+    $WinTheme = "Light"
+}
+
 # Enable visual styles
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
@@ -121,6 +129,28 @@ $form.Controls.Add($buttonBrowse)
 $form.Controls.Add($buttonRun)
 $form.Controls.Add($label2)
 
+#Defining Colors
+if ($WinTheme -eq "Dark") {
+    $lightcolor = [System.Drawing.Color]::FromArgb(31, 31, 31)
+    $txtcolor = [System.Drawing.Color]::FromArgb(240, 240, 240)
+    $buttonRun.FlatStyle = 'Flat'
+    $buttonRun.FlatAppearance.BorderColor = [System.Drawing.Color]::FromArgb(100, 100, 100)
+    $buttonRun.BackColor = [System.Drawing.Color]::FromArgb(50, 50, 50)
+    $buttonBrowse.FlatStyle = 'Flat'
+    $buttonBrowse.FlatAppearance.BorderColor = [System.Drawing.Color]::FromArgb(100, 100, 100)
+    $buttonBrowse.BackColor = [System.Drawing.Color]::FromArgb(50, 50, 50)
+    #$buttonBrowse.Height = 23
+    $textBox.BorderStyle = 'FixedSingle'
+    $textBox.BackColor = [System.Drawing.Color]::FromArgb(50, 50, 50)
+    $textBox.ForeColor = [System.Drawing.Color]::FromArgb(255, 255, 255)
+} else {
+    $lightcolor = [System.Drawing.Color]::SystemColor
+    $txtcolor = [System.Drawing.Color]::SystemColor
+    #$buttonBrowse.Height = 23
+}
+#
+$form.BackColor = $lightcolor
+$form.ForeColor = $txtcolor
 
 # Show the form
 $form.ShowDialog()
