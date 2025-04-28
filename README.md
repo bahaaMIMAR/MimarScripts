@@ -1,5 +1,5 @@
 # Mimar Scripts
-![MIMAR](https://github.com/bahaaMIMAR/MimarScripts/blob/main/Mimar%20-%20banner.webp)
+![MIMAR](https://github.com/bahaaMIMAR/MimarScripts/blob/main/MimarBanner%2B.png)
 
 
 ## Overview
